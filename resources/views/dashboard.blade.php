@@ -24,13 +24,15 @@
 
             <!-- Navigation Links -->
             <div class="px-4">
+                <a href="{{ route('students.index') }}" class="block py-2 hover:bg-black">Students</a>
+                <!-- Add New Student -->
+                <a href="{{ route('students.create') }}" class="block py-2 hover:bg-black">Add Student</a>
                 <a href="{{ route('slider-images.index') }}" class="block py-2 hover:bg-black">Slider Images</a>
                 <a href="{{ route('gallery.index') }}" class="block py-2 hover:bg-black">Gallery</a>
                 <a href="{{ route('members.index') }}" class="block py-2 hover:bg-black">Members</a>
                 <a href="{{ route('notices.index') }}" class="block py-2 hover:bg-black">Notices</a>
             </div>
         </nav>
-
         <!-- Main Content -->
         <main id="main-content" class="flex-1 w-full lg:ml-[350px] min-h-screen">
             <!-- Header Section (with Hamburger Menu on Left and Admin Name/Buttons on Right) -->
