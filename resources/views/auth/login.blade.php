@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CDN -->
 </head>
 <body class="bg-gray-100">
-
+    
     <div class="flex justify-center items-center min-h-screen">
         <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
             <h1 class="text-3xl font-semibold text-center text-blue-600 mb-6">Login</h1>

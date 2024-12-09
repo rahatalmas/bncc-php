@@ -1,0 +1,270 @@
+/* body{
+    background-image: url("/armydress.jpg");
+} */
+.slider-section{
+    border-top: 2px solid gray;
+    width: 100%;
+    background-color: aliceblue;
+}
+
+/* officer info section  */
+/* ----------------------- */
+.officer-info{
+    background-color: white;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 35% 60%;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.officer-image-container{
+    border-radius: 10px;
+}
+
+.officer-image{
+    border-radius: 10px;
+    margin: auto;
+}
+
+.officer-info-text{
+    text-align: justify;
+}
+
+.h1{
+    font-size: x-large;
+}
+.button{
+    margin-top: 10px;
+    padding:10px 15px;
+    background-color: skyblue;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-weight:450;
+    border: 2px solid skyblue;
+}
+
+.button:hover{
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 750px) {
+    .officer-info {
+        grid-template-columns: 1fr; 
+
+    }
+    .notice-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* officer info section  */
+/* ----------------------------------------- */
+
+
+/*------- notice board page------ */
+
+.notice-board-header{
+    background-color:rgb(162, 210, 230);
+    padding: 25px;
+    border-top: 3px solid rgb(199, 199, 199);
+    border-bottom: 3px solid rgb(199, 199, 199);
+}
+
+.join-now-button-section{
+    padding-right: 20px;
+    border-right: 2px solid rgb(221, 221, 221);
+}
+
+.join-bncc-btn{
+    width: 100%;
+    padding: 15px;
+    background-color: navy;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid navy;
+}
+.join-bncc-btn:hover{
+    background-color: darkblue;
+}
+.notice-container{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 35% 55%;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    min-height: 50vh;
+}
+
+@media (max-width: 750px) {
+    .notice-container{
+        grid-template-columns: 1fr;
+    }
+    .join-now-button-section{
+       border-right: none;
+    }
+}
+
+
+.notice-gif-img{
+    width: 300px;
+}
+
+
+
+/* about page  */
+/* -------------------------- */
+
+.about-container{
+    padding: 20px;
+    background-color: white;
+    margin: 10px 20px;
+    text-align: justify;
+    border-radius: 10px;
+}
+
+.history-container{
+    padding: 20px;
+    background-color: white;
+    margin: 10px 20px;
+    text-align: justify;
+    border-radius: 10px;
+}
+.history-text{
+    margin-top: 10px;
+}
+.about-text{
+    margin-top: 10px;
+}
+
+/* about page end */
+/* --------------------------- */
+
+
+
+/* activity page ---- */
+/* ------------------------------ */
+
+.activity-card-container{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px 20px;
+}
+
+.activity-card{
+    background-color: white;
+    height: 210px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+@media (max-width: 950px) {
+    .activity-card-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* activity page end */
+/* -=------------------------------ */
+
+
+
+/* wings page start */
+/* --------------------------- */
+
+
+.wings-list{
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.wing-item{
+    text-align: center;
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+
+.army-wing-activities{
+
+}
+.army-activity{
+    margin: 10px;
+    background-color: white;
+    padding: 15px;
+}
+
+.wing-details{
+    padding: 15px;
+    margin:10px;
+    background-color: white;
+}
+
+.army-wing-details {
+    margin-top: 20px;
+  }
+
+  .army-wing-activities {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .army-activity {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  .toggle-btn {
+    display: flex;
+    justify-content: space-between; /* Ensure space between text and icon */
+    align-items: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: black; /* Set text color to black */
+    width: 100%;
+  }
+
+  .toggle-btn .toggle-icon {
+    font-size: 24px;
+  }
+
+  .activity-content {
+    display: none;
+    padding: 10px 0;
+    font-size: 16px;
+    color: black; /* Set content text color to black */
+  }
+
+  .activity-content p {
+    margin: 0;
+  }
+
+  .army-activity.active .activity-content {
+    display: block;
+  }
+
+  .army-activity.active .toggle-icon {
+    transform: rotate(45deg); /* Rotate icon when active */
+  }
+
+/*  wings page end ..... */
+/* ------------------------------- */

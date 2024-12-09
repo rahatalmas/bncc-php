@@ -1,64 +1,155 @@
 @extends('public.layouts.publicuilayout')
 @section('content')
-<div class="container mx-auto">
 
-      <main class=" ">
-        <div class="container relative mx-auto overflow-hidden">
+{{-- slider section --}}
+{{-- -------------- --}}
+      <main class="slider-section">
+        <div class=" relative overflow-hidden">
             <div class="flex transition-transform" id="slides">
                 @foreach($sliderImages as $sliderImage)
                     <div
                         class="min-w-full bg-center bg-cover bg-no-repeat text-white text-3xl"
-                        style="height: 70vh; background-image: url('{{ "http://127.0.0.1:8000/storage/" . $sliderImage->picture }}');"
+                        style="height: 45vh;background-image: url('{{ "storage/" . $sliderImage->picture }}');"
                     ></div>
-                @endforeach
-                
+                @endforeach              
             </div>
-            <button
-                class="absolute top-1/2 left-5 text-white px-4 py-2"
-                onclick="showSlide(-1)"
-            >
+            <button class="absolute top-1/2 left-5 text-white px-4 py-2"
+                onclick="showSlide(-1)">
                 ❮
             </button>
             <button
                 class="absolute top-1/2 right-5 text-white px-4 py-2"
-                onclick="showSlide(1)"
-            >
+                onclick="showSlide(1)">
                 ❯
             </button>
         </div>
       </main>
+{{-- slider section --}}
+{{-- -------end-------- --}}
 
-      {{-- <section
-        class="max-w-6xl mx-auto my-10 grid grid-cols-1 md:grid-cols-2 gap-8 p-2">
-        <div class="bg-green-200 p-6 rounded-lg">
-          <h2 class="text-lg font-semibold">Our Pride</h2>
-          <p class="mt-4 text-gray-600">
-            Meet these inspiring men and women who achieved the uncommon.
-          </p>
-          <button
-            class="mt-4 bg-black text-white py-2 px-4 rounded hover:bg-gray-700"
-          >
-            Read More
-          </button>
-        </div>
-        <div class="bg-green-200 p-6 rounded-lg">
-          <h2 class="text-lg font-semibold">The Architect</h2>
-          <p class="mt-4 text-gray-600">
-            Meet these inspiring men and women who achieved the uncommon.
-          </p>
-          <button
-            class="mt-4 bg-black text-white py-2 px-4 rounded hover:bg-gray-700"
-          >
-            Read More
-          </button>
-        </div>
-      </section> --}}
 
-      <section 
-  class="relative pt-16 pb-16 bg-green-700 mt-10 mb-20" 
-  style="background-color: #096123; background-image: url('https://w0.peakpx.com/wallpaper/569/229/HD-wallpaper-military-dress-design-military-dress-design-background-thumbnail.jpg'); background-repeat: no-repeat; background-size: cover;" 
- 
+
+
+{{-- officer info section --}}
+{{-- -------------- --}}
+<section class="officer-info">
+    <div class="officer-image-container">
+       <img class="officer-image" src="https://img.freepik.com/premium-photo/army-commando_975022-52.jpg" alt="officer image" />
+    </div>
+    <div class="officer-info-text">
+        <h1 class="h1">Officer Info</h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <button class="button">More Members</button>
+    </div>
+</section>
+{{-- officer info section --}}
+{{-- ------end----------- --}}
+<section 
+
+class="relative pt-6 pb-6 bg-green-900"
+style="background-image: url('https://bncc.info/web_editor/shape/web_editor/Wavy/10.svg?c1=%2330E80C&c2=%23C52929&flip=xy'); background-position: center; background-size: cover;"
 >
+<div class="container mx-auto">
+  <div class="flex flex-wrap items-center justify-center gap-10">
+  
+    <div class="w-full lg:w-5/12 px-4 py-6 bg-green-800 rounded-lg text-center mx-2 transform transition duration-300 hover:scale-105">
+      <div class="flex justify-center items-center mb-4">
+        <a href="/apply" class="flex justify-center items-center w-16 h-16 rounded-full bg-blue-500">
+          <i class="fa fa-2x fa-user text-white"></i>
+        </a>
+      </div>
+      <h2 class="text-2xl text-white font-bold mb-2">Join BNCC</h2>
+      <p class="text-white">
+        To register as a Cadet/PUO/TUO/BNCCO/Serving Military Officer kindly use this link.
+      </p>
+    </div>
+
+  
+    <div class="w-full lg:w-6/12 px-4 py-6 bg-blue-900 rounded-lg text-center mx-2 mt-6 lg:mt-0 transform transition duration-300 hover:scale-105">
+      <div class="flex justify-center items-center mb-4">
+        <a href="/login" class="flex justify-center items-center w-16 h-16 rounded-full bg-blue-700">
+          <i class="fa fa-2x fa-unlock-alt text-white"></i>
+        </a>
+      </div>
+      <h2 class="text-2xl text-white font-bold mb-2">Admin Sign In</h2>
+      <p class="text-gray-300">
+        This link is only for the admins
+      </p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section class="mb-10">
+  <div class="relative max-w-screen-md mx-auto text-center top-2">
+    <h1 class="text-black text-2xl lg:text-5xl font-bold">
+      BNCC STRENGTH
+    </h1>
+  </div>
+  <div class="mt-10 flex flex-wrap justify-center items-center gap-4">
+    <a
+      
+      class="flex h-20 w-40 flex-col items-center justify-center rounded-md shadow-lg border border-dashed border-gray-400 transition-colors duration-100 ease-in-out hover:border-gray-800"
+    >
+      <div class="flex flex-row items-center justify-center">
+        <span class="font-bold text-gray-600"> 40</span>
+      </div>
+
+      <div class="mt-2 text-sm text-gray-400">Cadet</div>
+    </a>
+
+    <a
+      
+      class="flex h-20 w-40 flex-col items-center justify-center rounded-md shadow-lg border border-dashed border-gray-400 transition-colors duration-100 ease-in-out hover:border-gray-800"
+    >
+      <div class="flex flex-row items-center justify-center">
+        <span class="font-bold text-gray-600"> 45 </span>
+      </div>
+
+      <div class="mt-2 text-sm text-gray-400">Cadet Lance Corporal</div>
+    </a>
+    <a
+      
+      class="flex h-20 w-40 flex-col items-center justify-center rounded-md shadow-lg border border-dashed border-gray-400 transition-colors duration-100 ease-in-out hover:border-gray-800"
+    >
+      <div class="flex flex-row items-center justify-center">
+        <span class="font-bold text-gray-600"> 45 </span>
+      </div>
+
+      <div class="mt-2 text-sm text-gray-400">Cadet Corporal</div>
+    </a>
+
+    <a
+      
+      class="flex h-20 w-40 flex-col items-center justify-center rounded-md shadow-lg border border-dashed border-gray-400 transition-colors duration-100 ease-in-out hover:border-gray-800"
+    >
+      <div class="flex flex-row items-center justify-center">
+        <span class="font-bold text-gray-600"> 120</span>
+      </div>
+
+      <div class="mt-2 text-sm text-gray-400">Cadet Sergeant</div>
+    </a>
+    <a
+      
+      class="flex h-20 w-40 flex-col items-center justify-center rounded-md shadow-lg border border-dashed border-gray-400 transition-colors duration-100 ease-in-out hover:border-gray-800"
+    >
+      <div class="flex flex-row items-center justify-center">
+        <span class="font-bold text-gray-600"> 2</span>
+      </div>
+
+      <div class="mt-2 text-sm text-gray-400">CUO</div>
+    </a>
+  </div>
+</section>
+
+{{--
+       <section 
+  class="relative pt-16 pb-16 bg-green-700 mt-10 mb-20" 
+  style="background-color: #096123; background-image: url('https://w0.peakpx.com/wallpaper/569/229/HD-wallpaper-military-dress-design-military-dress-design-background-thumbnail.jpg'); background-repeat: no-repeat; background-size: cover;" >
+  
   <div class="container mx-auto p-5">
     <div class="flex flex-wrap gap-5 items-center">
      
@@ -174,7 +265,7 @@
       <section class="mb-10">
         <div class="mt-10 flex flex-wrap justify-center items-center gap-4">
           <a
-            href="#"
+            
             class="flex h-20 w-40 flex-col items-center justify-center rounded-md shadow-lg border border-dashed border-gray-400 transition-colors duration-100 ease-in-out hover:border-gray-800"
           >
             <div class="flex flex-row items-center justify-center">
@@ -185,7 +276,7 @@
           </a>
 
           <a
-            href="#"
+            
             class="flex h-20 w-40 flex-col items-center justify-center rounded-md shadow-lg border border-dashed border-gray-400 transition-colors duration-100 ease-in-out hover:border-gray-800"
           >
             <div class="flex flex-row items-center justify-center">
@@ -195,7 +286,7 @@
             <div class="mt-2 text-sm text-gray-400">Cadet Lance Corporal</div>
           </a>
           <a
-            href="#"
+            
             class="flex h-20 w-40 flex-col items-center justify-center rounded-md shadow-lg border border-dashed border-gray-400 transition-colors duration-100 ease-in-out hover:border-gray-800"
           >
             <div class="flex flex-row items-center justify-center">
@@ -206,7 +297,7 @@
           </a>
 
           <a
-            href="#"
+            
             class="flex h-20 w-40 flex-col items-center justify-center rounded-md shadow-lg border border-dashed border-gray-400 transition-colors duration-100 ease-in-out hover:border-gray-800"
           >
             <div class="flex flex-row items-center justify-center">
@@ -216,7 +307,7 @@
             <div class="mt-2 text-sm text-gray-400">Cadet Sergeant</div>
           </a>
           <a
-            href="#"
+            
             class="flex h-20 w-40 flex-col items-center justify-center rounded-md shadow-lg border border-dashed border-gray-400 transition-colors duration-100 ease-in-out hover:border-gray-800"
           >
             <div class="flex flex-row items-center justify-center">
@@ -266,6 +357,6 @@
       </div>
     </section>
 
-</div>
+--}}
 
 @endsection

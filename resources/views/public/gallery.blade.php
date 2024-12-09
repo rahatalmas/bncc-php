@@ -1,10 +1,14 @@
 @extends('public.layouts.publicuilayout')
 
 @section('content')
-<div class="container mx-auto">
-    <div class="h-40 flex justify-center items-center bg-green-100 border-t-8 border-t-white mt-10">
-        <h1 class="text-6xl font-bold text-center">Gallery</h1>
-    </div>
+<div class=" mx-auto">
+       {{-- header section --}}
+       <div class="notice-board-header">
+        <h1 class="text-4xl font-bold text-center bg-gradient-to-r from-red-500 via-purple-500 to-blue-400 bg-clip-text text-transparent">
+          Gallery
+        </h1>
+      </div>
+      {{-- header section end --}}
 
     <main class="py-10">
         <div class="container mx-auto">

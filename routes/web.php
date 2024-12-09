@@ -15,6 +15,18 @@ use App\Http\Controllers\AuthController;
 
 Route::get('/', [PublicHomeController::class,'index'])->name('public.home'); 
 
+Route::get('/about', function () {
+        return view('public.about');
+    });
+Route::get('/training', function () {
+        return view('public.training');
+    });
+Route::get('/wings', function () {
+        return view('public.wings');
+    });
+Route::get('/organization', function () {
+        return view('public.organization');
+    });
 Route::get('/noticeboard', [PublicNoticeController::class,'getNotice'])->name('notice');
 
 Route::get('/honourBoard', function () {
